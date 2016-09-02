@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by Moondas (http://jsbin.com/vuwobig/4/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+  <title>Color Clock</title>
+<style id="jsbin-css">
+* {
+  margin: 0; padding: 0;
+}
+
+#clock {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  margin-top: -40px;
+  font-family: 'Poiret One', sans-serif;
+  font-size: 68px;
+  color: white;
+}
+
+html, body {
+  height: 100%;
+}
+
+
+</style>
+</head>
+<body>
+<div id="clock">12:13:14</div>
+<script id="jsbin-javascript">
+function colorClock() {
+  var date = new Date();
+  var hours = date.getHours();
+  var mins = date.getMinutes();
+  var secs = date.getSeconds();
+
+  var mHours = 256-Math.round(256/24)*hours;
+  var mMins = 256-Math.round(256/60)*mins;
+  var mSecs = Math.round(256/60)*secs;
+  
+  var hexColor = '#' + mHours.toString(16) + mMins.toString(16) + mSecs.toString(16);
+  
+  if (secs < 10) {
+    secs = '0' + secs;
+  }
+
+  if (mins < 10) {
+    mins = '0' + mins;
+  }
+
+  if (hours < 10) {
+    hours = '0' + hours;
+  }
+
+  var clockFace = hours+':'+mins+':'+secs;
+  
+  setTimeout(function(){
+    colorClock();
+  },1000);
+
+  document.body.style.background = hexColor;
+  document.getElementById('clock').innerHTML = clockFace;
+}
+
+colorClock();
+</script>
+</body>
+</html>
