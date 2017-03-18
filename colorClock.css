@@ -1,0 +1,15 @@
+* {
+  margin: 0; padding: 0;
+}
+#clock {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  margin-top: -40px;
+  font-family: 'Poiret One', sans-serif;
+  font-size: 68px;
+  color: white;
+}
+html, body {
+  height: 100%;
+}
