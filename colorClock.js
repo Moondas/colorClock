@@ -26,4 +26,3 @@ function colorClock() {
   document.body.style.background = hexColor;
   document.getElementById('clock').innerHTML = clockFace;
 }
-colorClock();
