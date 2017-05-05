@@ -7,7 +7,7 @@ function colorClock() {
   var mMins = 256-Math.round(256/60)*mins;
   var mSecs = Math.round(256/60)*secs;
   
-  var hexColor = '#' + mHours.toString(16) + mMins.toString(16) + mSecs.toString(16);
+  var rgbColor = 'rgb(' + mHours.toString() + ',' + mMins.toString() + ',' + mSecs.toString() + ')';
   
   if (secs < 10) {
     secs = '0' + secs;
@@ -23,6 +23,6 @@ function colorClock() {
   setTimeout(function(){
     colorClock();
   },1000);
-  document.body.style.background = hexColor;
+  document.body.style.background = rgbColor;
   document.getElementById('clock').innerHTML = clockFace;
 }
