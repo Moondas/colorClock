@@ -7,7 +7,7 @@ Simple Color Clock which changes background color while seconds are changing
 - HTML5
 - CSS3
 - JavaScript
+- JSBin
 
-## Live preview aviable at
-
+## Live preview available at
 https://moondas.github.io/colorClock
