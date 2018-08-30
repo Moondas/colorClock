@@ -1,0 +1,32 @@
+{
+  "name": "colorclock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "colorClock.js",
+  "scripts": {
+    "test": "karma start karma-conf.js",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Moondas/colorClock.git"
+  },
+  "author": "Peter Vigh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Moondas/colorClock/issues"
+  },
+  "homepage": "https://github.com/Moondas/colorClock#readme",
+  "devDependencies": {
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "karma": "^3.0.0",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^1.3.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-mocha-reporter": "^2.2.5"
+  }
+}
