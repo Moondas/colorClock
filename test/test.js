@@ -3,7 +3,7 @@ describe('Helper function', () => {
         assert.equal(addLeadingZero(9), '09');
     });
 
-    it('can\'t add leadin zero', () => {
+    it('can\'t add leading zero', () => {
         assert.equal(addLeadingZero(10), '10');
     });
     
