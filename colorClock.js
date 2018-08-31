@@ -1,3 +1,7 @@
+function addLeadingZero(num) {
+  return (num < 10 ? '0' : '') + num.toString();
+}
+
 function colorClock() {
   var date = new Date();
   var hours = date.getHours();
@@ -9,16 +13,7 @@ function colorClock() {
   
   var rgbColor = 'rgb(' + mHours + ', ' + mMins + ', ' + mSecs + ')';
   
-  if (secs < 10) {
-    secs = '0' + secs;
-  }
-  if (mins < 10) {
-    mins = '0' + mins;
-  }
-  if (hours < 10) {
-    hours = '0' + hours;
-  }
-  var clockFace = hours + ':' + mins + ':' + secs;
+  var clockFace = addLeadingZero(hours).toString() + ':' + addLeadingZero(mins) + ':' + addLeadingZero(secs);
 
   setTimeout(function() {
     colorClock ();
