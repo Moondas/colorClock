@@ -1,6 +1,6 @@
 language: node_js
 node_js:
   - "10"
-sudo: required
+sudo: required # This is must have to run Chrome
 addons:
   chrome: stable # have Travis install Chrome stable.
